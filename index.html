@@ -3,12 +3,23 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.style.display == 'block')
+      e.style.display = 'none';
+    else
+      e.style.display = 'block';
+  }
+  </script>
 </head>
 
 <body>
+
   <header>
     <link rel="stylesheet" href="">
     <tab></tab>
@@ -16,7 +27,8 @@
     <h1 class="title">Mis cervezas</h1>
     <p class="subtitle">Aficiones y locuras de un amante de la cerveza</p>
     <nav>
-      <ul class="menu">
+      <button onclick="toggle_visibility('menu');" class="btnmenu">Menu</button>
+      <ul id="menu" class="menu">
         <li class="menuitem">
           <a href="index.html" class="menulink">Inicio</a>
         </li>
@@ -29,45 +41,47 @@
       </ul>
     </nav>
   </header>
+
+  <div class="container">
   <aside>
-  	 <div>
-  	 	<h1 class="bannerTitle">Anuncio 1</h1>
-  	 	<div class="bannerBody">
-  	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora in itaque repudiandae culpa iusto sapiente consequatur, nihil magni voluptate laborum non eaque, officia eveniet minus! Sapiente quos optio impedit.</p>
-  	 		<p>In, nihil distinctio cumque temporibus maiores aliquam voluptatum doloremque, quibusdam maxime illum, est placeat autem repellat ducimus laboriosam quia iusto repellendus cupiditate dolore fugiat. Fugit tempora error ducimus. Quibusdam, repudiandae.</p>
-  	 	</div>
-  	 </div>
-  	 <div>
-  	 	<h1 class="bannerTitle">Anuncio 2</h1>
-  	 	<div class="bannerBody">
-  	 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, consectetur, ducimus id voluptatem consequuntur dolores hic, harum sint temporibus, quisquam accusamus eum nostrum eius recusandae animi eos veniam! Voluptas, praesentium.</p>
-  	 		<p>Quaerat sequi animi non, maxime dolor distinctio necessitatibus error accusamus quasi beatae nulla aliquid magni odio nihil, adipisci corrupti dolore quos eius reiciendis recusandae. Sequi veniam obcaecati quis dolores nulla!</p>
-  	 	</div>
-  	 </div>
+    <div>
+      <h1 class="bannerTitle">Anuncio 1</h1>
+      <div class="bannerBody">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore tempora in itaque repudiandae culpa iusto sapiente consequatur, nihil magni voluptate laborum non eaque, officia eveniet minus! Sapiente quos optio impedit.</p>
+        <p>In, nihil distinctio cumque temporibus maiores aliquam voluptatum doloremque, quibusdam maxime illum, est placeat autem repellat ducimus laboriosam quia iusto repellendus cupiditate dolore fugiat. Fugit tempora error ducimus. Quibusdam, repudiandae.</p>
+      </div>
+    </div>
+    <div>
+      <h1 class="bannerTitle">Anuncio 2</h1>
+      <div class="bannerBody">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, consectetur, ducimus id voluptatem consequuntur dolores hic, harum sint temporibus, quisquam accusamus eum nostrum eius recusandae animi eos veniam! Voluptas, praesentium.</p>
+        <p>Quaerat sequi animi non, maxime dolor distinctio necessitatibus error accusamus quasi beatae nulla aliquid magni odio nihil, adipisci corrupti dolore quos eius reiciendis recusandae. Sequi veniam obcaecati quis dolores nulla!</p>
+      </div>
+    </div>
   </aside>
   <main>
-
-<article>
-<header>
-	<h1 class="newstitle"><a href="">Como se tira la cerveza</a></h1>
-		<h1 class="newsdate"><a href="">17 de Mayo de 2016</a></h1>
-</header>
-<p>Quienes más saben de esto recomiendan la tirada especial o en dos tiempos.</p>
-<p>El primer tiempo consiste en llenar tres cuartas partes de la copa sin generar espuma. El líquido debe caer sobre las paredes, sin movimientos de arriba y abajo de la copa y sin introducir el vaso en el grifo. Tras ponerlo en vertical, el segundo paso consiste en llenar los últimos tres centímetros de copa de una crema de espuma.</p>
-<p>Los expertos consideran que algunas modas, como las de congelar los vasos, "mata" la cerveza.</p></article>
-
-<article>
-<header>
-	<h1 class="newstitle"><a href="">El consumo moderado de cerveza tiene un efecto preventivo sobre la diabetes</a></h1>
-		<h1 class="newsdate"><a href="">14 de Mayo de 2016</a></h1>
-</header>
-<p>El informe fue presentado por el centro Cerveza y Salud con la colaboración de la Associació de Diabètics de Catalunya y la Federación de Diabéticos Españoles.</p>
-<p>Varios componentes de la cerveza: la fibra soluble, los compuestos polifenólicos, los minerales y la baja graduación alcohólica, ayudan en el control de la diabetes. Además, la cerveza es capaz de aumentar la capacidad antioxidante del plasma.</p></article>
-
+    <article>
+      <header>
+        <h1 class="newstitle"><a href="">Como se tira la cerveza</a></h1>
+        <h1 class="newsdate"><a href="">17 de Mayo de 2016</a></h1>
+      </header>
+      <p>Quienes más saben de esto recomiendan la tirada especial o en dos tiempos.</p>
+      <p>El primer tiempo consiste en llenar tres cuartas partes de la copa sin generar espuma. El líquido debe caer sobre las paredes, sin movimientos de arriba y abajo de la copa y sin introducir el vaso en el grifo. Tras ponerlo en vertical, el segundo paso consiste en llenar los últimos tres centímetros de copa de una crema de espuma.</p>
+      <p>Los expertos consideran que algunas modas, como las de congelar los vasos, "mata" la cerveza.</p>
+    </article>
+    <article>
+      <header>
+        <h1 class="newstitle"><a href="">El consumo moderado de cerveza tiene un efecto preventivo sobre la diabetes</a></h1>
+        <h1 class="newsdate"><a href="">14 de Mayo de 2016</a></h1>
+      </header>
+      <p>El informe fue presentado por el centro Cerveza y Salud con la colaboración de la Associació de Diabètics de Catalunya y la Federación de Diabéticos Españoles.</p>
+      <p>Varios componentes de la cerveza: la fibra soluble, los compuestos polifenólicos, los minerales y la baja graduación alcohólica, ayudan en el control de la diabetes. Además, la cerveza es capaz de aumentar la capacidad antioxidante del plasma.</p>
+    </article>
   </main>
   <footer>
-  	<p class="copyright">Sitio web realizado por un amante de la cerveza</p>
+    <p class="copyright">Sitio web realizado por un amante de la cerveza</p>
   </footer>
+  </div>
 </body>
 
 </html>
